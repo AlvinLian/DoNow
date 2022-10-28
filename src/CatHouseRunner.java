@@ -5,72 +5,87 @@ public class CatHouseRunner {
         Cat daisy = new Cat("Daisy",3);
         Cat eleanor = new Cat("Eleanor", 8);
 
-        CatHouse catHouse = new CatHouse(daisy,eleanor,"Alvin");
+        CatHouse myHouse = new CatHouse(daisy,eleanor,"Alvin");
+        System.out.println(myHouse.houseInfo());
+        myHouse.rollCall();
 
         // TASK 2-3: write the methods as specified, then write code below to
         // test your new methods using the objects you created above in Task 1
 
+        /* System.out.println(daisy.getName());
+        System.out.println(daisy.getAge());
+
+        System.out.println(eleanor.getName());
+        System.out.println(eleanor.getAge());
+
+        System.out.println(daisy.speak());
+        System.out.println(eleanor.speak());
+
+        daisy.introduce();
+        eleanor.introduce();
+
+        myHouse.rollCall();
+        myHouse.catNoise();
+        System.out.println(myHouse.houseInfo());
+        */
 
 
 
+        System.out.println("------- Test set 1 -------");
+        Cat garfield = new Cat("Garfield", 5);
 
+        Cat crookshanks = new Cat("Crookshanks", 6);
+        CatHouse myCats = new CatHouse(garfield, crookshanks, "Mr. Miller");
 
-        // TASK 4: COMPLETE TEST CASES: uncomment the code below to fully test
-/*
-    System.out.println("------- Test set 1 -------");
-    Cat garfield = new Cat("Garfield", 5);
-    Cat crookshanks = new Cat("Crookshanks", 6);
-    CatHouse myCats = new CatHouse(garfield, crookshanks, "Mr. Miller");
+        // print CatHouse info
+        System.out.println(myCats.houseInfo());
 
-    // print CatHouse info
-    System.out.println(myCats.houseInfo());
+        // older cat, Crookshanks, speaks first!
+        myCats.rollCall();
 
-    // older cat, Crookshanks, speaks first!
-    myCats.rollCall();
+        // cat1 then cat2 each says a random thing
+        myCats.catNoise();
 
-    // cat1 then cat2 each says a random thing
-    myCats.catNoise();
+        System.out.println("------- Test set 2 -------");
+        Cat toby = new Cat("Toby", 10);
+        Cat ziggy = new Cat("Ziggy", 8);
 
-    System.out.println("------- Test set 2 -------");
-    Cat toby = new Cat("Toby", 10);
-    Cat ziggy = new Cat("Ziggy", 8);
+        CatHouse yourCats = new CatHouse(toby, ziggy, "Alex");
 
-    CatHouse yourCats = new CatHouse(toby, ziggy, "Alex");
+        // print CatHouse info
+        System.out.println(yourCats.houseInfo());
 
-    // print CatHouse info
-    System.out.println(yourCats.houseInfo());
+        // older cat, Toby, speaks first!
+        yourCats.rollCall();
 
-    // older cat, Toby, speaks first!
-    yourCats.rollCall();
+        yourCats.catNoise();
 
-    yourCats.catNoise();
+        System.out.println("------- Test set 3 -------");
+        Cat katie = new Cat("Katie", 12);
+        Cat billy = new Cat("Billy", 12);
 
-    System.out.println("------- Test set 3 -------");
-    Cat katie = new Cat("Katie", 12);
-    Cat billy = new Cat("Billy", 12);
+        CatHouse neighborsCats = new CatHouse(katie, billy, "Ms. Thompson");
 
-    CatHouse neighborsCats = new CatHouse(katie, billy, "Ms. Thompson");
+        // print CatHouse info
+        System.out.println(neighborsCats.houseInfo());
 
-    // print CatHouse info
-    System.out.println(neighborsCats.houseInfo());
+        // same age, so Billy speaks first because B before K
+        neighborsCats.rollCall();
 
-    // same age, so Billy speaks first because B before K
-    neighborsCats.rollCall();
+        neighborsCats.catNoise();
 
-    neighborsCats.catNoise();
+        System.out.println("------- Test set 4 -------");
+        Cat autumn1 = new Cat("Autumn", 15);
+        Cat autumn2 = new Cat("Cathy", 15);
 
-    System.out.println("------- Test set 4 -------");
-    Cat autumn1 = new Cat("Autumn", 15);
-    Cat autumn2 = new Cat("Cathy", 15);
+        CatHouse sameCats = new CatHouse(autumn1, autumn2, "ASPCA");
 
-    CatHouse sameCats = new CatHouse(autumn1, autumn2, "ASPCA");
+        // print CatHouse info
+        System.out.println(sameCats.houseInfo());
 
-    // print CatHouse info
-    System.out.println(sameCats.houseInfo());
+        sameCats.rollCall();
 
-    sameCats.rollCall();
+        sameCats.catNoise();
 
-    sameCats.catNoise();
- */
     }
-}
+ }

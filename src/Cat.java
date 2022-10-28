@@ -15,7 +15,9 @@ public class Cat
 
     // add a getAge() getter below for
     // obtaining the Cat's age
-
+    public int getAge() {
+        return age;
+    }
 
 
     // MODIFY this method so that the Cat randomly
@@ -23,7 +25,13 @@ public class Cat
     // (make any messages you want!) rather than always returning "meow".
     // Each message should have equal chance of being returned.
     public String speak() {
-        return "meow!";
+        if ((int) (Math.random() * 3) == 0) {
+            return "meow!";
+        } else if ((int) (Math.random() * 3) == 1) {
+            return "wow!";
+        } else {
+            return "this is crazy!";
+        }
     }
 
     public void introduce() {
